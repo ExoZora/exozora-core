@@ -14,23 +14,22 @@ Install the following before contributing:
 - **pre-commit**
 - **A POSIX shell** (`bash` recommended)
 
-Recommended verification commands:
+## 2) Platform-Specific Requirements (Windows)
 
-```bash
-git --version
-rustc --version
-cargo --version
-pre-commit --version
-```
+Due to the use of the `x86_64-pc-windows-msvc` target, Windows contributors **must** have the MSVC linker installed:
 
-## 2) Clone Repository
+- **Required:** [Visual Studio 2017+](https://visualstudio.microsoft.com/downloads/) or [Build Tools for Visual Studio](https://visualstudio.microsoft.com/visual-cpp-build-tools/) with the "Desktop development with C++" workload.
+- **Note:** VS Code is an editor and does not include the necessary compilers/linkers.
+- **Shell:** Execute all commands in a **Bash** terminal (Git Bash, WSL, MSYS2).
+
+## 3) Clone Repository
 
 ```bash
 git clone <your-repo-url> exozora-core
 cd exozora-core
 ```
 
-## 3) Install Project Dependencies (Standardized Setup)
+## 4) Install Project Dependencies (Standardized Setup)
 
 Run the bootstrap script from repository root:
 
@@ -44,7 +43,7 @@ This script will:
 - Install `rustfmt` and `clippy` components.
 - Install Git pre-commit hooks.
 
-## 4) Install pre-commit (if missing)
+## 5) Install pre-commit (if missing)
 
 If `pre-commit` is not installed, use one of:
 
@@ -69,7 +68,7 @@ Then run:
 pre-commit --version
 ```
 
-## 5) Run CI Locally (Before Opening PR)
+## 6) Run CI Locally (Before Opening PR)
 
 Run the same baseline checks locally:
 
@@ -80,7 +79,7 @@ cargo test
 cargo check
 ```
 
-## 6) Create a Branch
+## 7) Create a Branch
 
 Never work directly on `main`.
 
@@ -92,7 +91,7 @@ Examples:
 - `feat/onboarding-docs`
 - `fix/planner-validation-typo`
 
-## 7) Commit and Push
+## 8) Commit and Push
 
 ```bash
 git add -A
@@ -100,7 +99,7 @@ git commit -m "docs: add onboarding and bootstrap workflow"
 git push -u origin feat/<short-description>
 ```
 
-## 8) Pull Request Workflow Rules
+## 9) Pull Request Workflow Rules
 
 - No direct commits to `main`.
 - PR is required for all changes.
@@ -108,7 +107,7 @@ git push -u origin feat/<short-description>
 - Keep PRs small and focused.
 - Architecture changes require an RFC under `docs/rfc/`.
 
-## 9) Coding Standards
+## 10) Coding Standards
 
 - Follow Rust idioms and repository structure.
 - Keep modules focused and composable.
@@ -116,7 +115,7 @@ git push -u origin feat/<short-description>
 - Run local CI checks before opening PR.
 - Avoid mixing refactors with feature work in the same PR.
 
-## 10) Definition of Done (Contributor Flow)
+## 11) Definition of Done (Contributor Flow)
 
 Every teammate should be able to:
 

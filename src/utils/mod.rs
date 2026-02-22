@@ -1,1 +1,1 @@
-// TODO: Define shared utility helpers and common types.
+//! Shared utilities (reserved for future use).
