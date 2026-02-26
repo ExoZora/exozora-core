@@ -52,7 +52,7 @@ This is documented explicitly to avoid future ambiguity around automatic directo
 
 ## Security Guarantees
 
-### v0.01 Guarantees
+### v0.01 Aspirational Guarantees
 - No path escape outside `working_dir`
 - No direct or indirect `sudo` invocation (substring hardened)
 - No known network utilities
